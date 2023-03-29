@@ -35,7 +35,14 @@ function _unsupportedIterableToArray(o, minLen) {
 }
 function sortScore(score, exam) {
     var cloneScore = _toConsumableArray(score);
-    return cloneScore.sort(function(first, second) {
+    var sortedScore = cloneScore.sort(function(first, second) {
         return second[exam] - first[exam];
     });
+    var sortedIndex = sortedScore.map(function(studentScore) {
+        return score.indexOf(studentScore);
+    });
+    return [
+        sortedScore,
+        sortedIndex
+    ];
 }
