@@ -1,3 +1,5 @@
+# `Assignment 2`
+
 This project is an assignment for Backend Assessment. The 2nd assignment is being developed with `next.js` framework for both frontend and backend. And using `Postgres DB`. The whole service is deploy at Vercel, while the database is deploy at Supabase.
 
 Demo link: https://floc-backend-assignment.vercel.app/
