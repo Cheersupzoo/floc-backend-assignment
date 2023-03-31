@@ -18,7 +18,7 @@ type Data = {
   };
 };
 
-type ProductInput = {
+export type ProductInput = {
   imageUrl: string;
   titleTH: string;
   titleEN: string;
