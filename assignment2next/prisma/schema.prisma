@@ -19,3 +19,19 @@ enum Permission {
   READ
   WRITE
 }
+
+model Product {
+  id            String      @id @default(uuid()) @db.VarChar(64)
+  title         Translation @relation(fields: [translationId], references: [id])
+  description   String
+  price         Float
+  imageUrl      String
+  translationId String      @db.VarChar(64)
+}
+
+model Translation {
+  id        String    @id @default(uuid()) @db.VarChar(64)
+  contentTH String
+  contentEN String
+  Product   Product[]
+}
